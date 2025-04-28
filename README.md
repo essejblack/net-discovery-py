@@ -1,10 +1,11 @@
-# Python Network Discovery Tool (Scapy + ipaddress)
+# Python Network Discovery Tool (Scapy + ipaddress + threading)
 
-This project is a simple network discovery scanner written in Python.  
+This project is a simple multi-threading network discovery scanner written in Python.  
 It checks which IP addresses are **up (alive)** and **down (no response)** on a given subnet.
 
 ## How it Works
 
+- Users `threading` to speed up network discovery.
 - Uses `ipaddress` to generate all IPs in a subnet.
 - Sends ICMP Echo Requests (ping) using Scapy.
 - Detects which hosts respond and which do not.
@@ -12,6 +13,7 @@ It checks which IP addresses are **up (alive)** and **down (no response)** on a 
 ## Requirements
 
 - Python 3
+- threading library
 - scapy library
 - ipaddress library
 
